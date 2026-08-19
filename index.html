@@ -1,64 +1,310 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Website</title>
-    <style>
-    body {
-        background-color: lightblue;
-    text-align: center;
-    padding-top: 50px;
-}
-   h1 {
-    color: darkblue;
-    font-size: 40px;
-    margin-bottom: 10px;
-} 
-h2 {
-    color: darkblue;
-    font-size: 28px;
-    margin-top: 30px;
-}
-p {
-    color: red;
-    font-size: 20px;
-    }
-   input, textarea { width: 300px; padding: 10px; font-size: 16px; border-radius: 8px; border: 1px solid gray; } textarea { height: 100px; } 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-button {
-    background-color: darkblue;
+    <title>Tsige Technology Services</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        nav {
+            background: #111827;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
     color: white;
-    font-size: 18px;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+}
+
+        nav a:hover {
+    color: #60a5fa;
+    border-bottom: 2px solid #60a5fa;
+}
+
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+    display: inline-block;
+    background: white;
+    color: #1e3a8a;
+    padding: 14px 25px;
     border-radius: 8px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
 }
-button:hover {
-    background-color: blue;
+
+.button:hover {
+    transform: translateY(-3px);
+    background: #e0ecff;
 }
-</style>
+
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+
+        section p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .skill {
+    background: white;
+    padding: 25px 35px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+        
+
+        form {
+            max-width: 500px;
+            margin: 30px auto;
+        }
+
+       input,
+textarea,
+select {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 130px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+        footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+@media (max-width: 600px) {
+    nav {
+        padding: 15px 10px;
+    }
+
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+
+    .hero {
+        padding: 70px 20px;
+    }
+
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+
+    .hero p {
+        font-size: 18px;
+    }
+
+
+    section {
+        padding: 50px 20px;
+    }
+
+
+    h2 {
+        font-size: 28px;
+    }
+
+
+    .skill {
+        width: 100%;
+    }
+}
+    </style>
 </head>
+
 <body>
 
-<h1>Welcome to My Website</h1>
-<p>Thank you for visiting my website.</p>
-<h2>About Me</h2>
-<p>I enjoy building websites and creating new things with technology.</p>
-<h2>My Skills</h2>
-<ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>Learning JavaScript</li>
-    <li>PC Building</li>
-    </ul>
-<h2>Contact Me</h2>
+    <nav>
+       <a href="#about">About</a>
+<a href="#why-us">Why Choose Us</a>
+<a href="#skills">Services</a>
+<a href="#contact">Contact</a>
+    </nav>
 
-<form action="https://formspree.io/f/xeajrypz" method="POST">
-    <input type="text" placeholder="Your Name"><br><br>
-    <input type="email" placeholder="Your Email"><br><br>
-    <textarea name="message" placeholder="Your Message"></textarea>
+    <div class="hero">
+        <h1>Tsige Technology Services</h1>
+
+        <p>
+    Professional computer solutions and technology services for small businesses.
+</p>
+
+        <a href="#about" class="button">Learn More</a>
+    </div>
+
+    <section id="about">
+        <h2>About Us</h2>
+
+        <p>
+    Tsige Technology Services helps small businesses with custom-built computers,
+    new computer setup, configuration, upgrades, and technology solutions.
+    Our goal is to provide reliable computer solutions that fit each business's needs.
+</p>
+    </section>
+<section id="why-us">
+    <h2>Why Choose Us</h2>
+
+    <p>
+        We focus on providing reliable computer solutions designed
+        specifically for small businesses.
+    </p>
+
+    <div class="skills">
+        <div class="skill">Reliable Solutions</div>
+        <div class="skill">Personal Service</div>
+        <div class="skill">Business Focused</div>
+        <div class="skill">Professional Setup</div>
+    </div>
+</section>
+    <section id="skills">
+        <h2>Our Services</h2>
+
+        <div class="skills">
+            <div class="skill">Custom PC Building</div>
+            <div class="skill">Business Computer Setup</div>
+            <div class="skill">Computer Configuration</div>
+            <div class="skill">PC Upgrades & Maintenance</div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+
+        <p>
+    Tell us what your business needs, and we'll be happy to discuss
+    the right computer solution for you.
+</p>
+
+        <form action="https://formspree.io/f/xeajrypz" method="POST">
+
+    <input
+        type="text"
+        name="name"
+        placeholder="Your Full Name"
+        required
+    >
+
+    <input
+        type="email"
+        name="email"
+        placeholder="Your Business Email"
+        required
+    >
+
+    <select name="service" required>
+        <option value="">What service do you need?</option>
+        <option value="Custom PC Building">Custom PC Building</option>
+        <option value="Business Computer Setup">Business Computer Setup</option>
+        <option value="Computer Configuration">Computer Configuration</option>
+        <option value="PC Upgrades & Maintenance">PC Upgrades & Maintenance</option>
+    </select>
+
+    <textarea
+        name="message"
+        placeholder="Tell us about your computer needs"
+        required
+    ></textarea>
+
     <button type="submit">Send Message</button>
+
 </form>
+    </section>
+
+    <footer>
+        <p>© 2026 Tsige Technology Services. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
