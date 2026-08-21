@@ -1,10 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tsige Technology Services</title>
+    <title>Tsige Technology Services | Computer Solutions for Small Businesses</title>
+
+    <meta name="description" content="Tsige Technology Services provides custom PC building, business computer setup, configuration, upgrades, maintenance, and technology solutions for small businesses.">
 
     <style>
         * {
@@ -13,298 +16,648 @@
             padding: 0;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f7fb;
-            color: #222;
+        html {
+            scroll-behavior: smooth;
         }
 
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
         nav {
             background: #111827;
-            padding: 20px;
-            text-align: center;
+            padding: 18px 20px;
+            text-align: left;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
         }
 
         nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: color 0.3s, border-bottom 0.3s;
-    padding-bottom: 5px;
-}
+            color: white;
+            text-decoration: none;
+            margin: 0 14px;
+            font-weight: bold;
+            padding-bottom: 5px;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
 
         nav a:hover {
-    color: #60a5fa;
-    border-bottom: 2px solid #60a5fa;
-}
+            color: #60a5fa;
+            border-bottom: 2px solid #60a5fa;
+        }
 
+        /* Hero */
         .hero {
-            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+            background:
+                linear-gradient(135deg, rgba(15, 45, 110, 0.96), rgba(37, 99, 235, 0.94));
             color: white;
             text-align: center;
-            padding: 100px 20px;
+            padding: 110px 20px;
         }
 
         .hero h1 {
-            font-size: 50px;
-            margin-bottom: 20px;
+            font-size: 52px;
+            line-height: 1.15;
+            margin-bottom: 22px;
         }
 
         .hero p {
+            max-width: 720px;
+            margin: 0 auto 32px;
             font-size: 20px;
-            margin-bottom: 30px;
+            color: #e5edff;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .button {
-    display: inline-block;
-    background: white;
-    color: #1e3a8a;
-    padding: 14px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.3s, background 0.3s;
-}
+            display: inline-block;
+            background: white;
+            color: #1e3a8a;
+            padding: 14px 26px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
 
-.button:hover {
-    transform: translateY(-3px);
-    background: #e0ecff;
-}
+        .button:hover {
+            transform: translateY(-3px);
+            background: #e0ecff;
+        }
 
+        .button-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .button-secondary:hover {
+            background: white;
+            color: #1e3a8a;
+        }
+
+        /* Sections */
         section {
-            max-width: 900px;
+            max-width: 1050px;
             margin: auto;
-            padding: 70px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
 
+        section:nth-of-type(even) {
+            background: #ffffff;
+            max-width: none;
+            padding-left: max(20px, calc((100% - 1050px) / 2));
+            padding-right: max(20px, calc((100% - 1050px) / 2));
+        }
+
         h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
+            font-size: 34px;
+            margin-bottom: 18px;
             color: #111827;
         }
 
-        section p {
+        .section-intro {
+            max-width: 750px;
+            margin: 0 auto 35px;
             font-size: 18px;
-            color: #555;
+            color: #5b6472;
         }
-        .skills {
-            display: flex;
-            justify-content: center;
+
+        /* About */
+        .about-content {
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+            color: #4b5563;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 30px;
+            margin-top: 35px;
         }
 
-        .skill {
-    background: white;
-    padding: 25px 35px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    font-weight: bold;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
+        .card {
+            background: white;
+            padding: 30px 22px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.skill:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-        
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.13);
+        }
+
+        .card-icon {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #111827;
+            margin-bottom: 10px;
+            font-size: 19px;
+        }
+
+        .card p {
+            color: #667085;
+            font-size: 15px;
+        }
+
+        /* Services */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin-top: 35px;
+        }
+
+        .service {
+            background: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+        }
+
+        .service h3 {
+            color: #1e3a8a;
+            margin-bottom: 8px;
+        }
+
+        .service p {
+            color: #5b6472;
+            font-size: 15px;
+        }
+
+        /* How We Work */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .step {
+            padding: 25px 15px;
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: #2563eb;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .step h3 {
+            margin-bottom: 8px;
+            color: #111827;
+        }
+
+        .step p {
+            font-size: 15px;
+            color: #667085;
+        }
+
+        /* Contact */
+        .contact-box {
+            max-width: 650px;
+            margin: auto;
+        }
 
         form {
-            max-width: 500px;
-            margin: 30px auto;
+            margin: 30px auto 0;
         }
 
-       input,
-textarea,
-select {
+        input,
+        textarea,
+        select {
             width: 100%;
             padding: 14px;
             margin-bottom: 15px;
-            border: 1px solid #ccc;
+            border: 1px solid #d1d5db;
             border-radius: 8px;
             font-size: 16px;
+            font-family: inherit;
+            background: white;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
         }
 
         textarea {
-            height: 130px;
+            height: 140px;
+            resize: vertical;
         }
 
         button {
+            width: 100%;
             background: #2563eb;
             color: white;
             border: none;
-            padding: 14px 25px;
+            padding: 15px 25px;
             border-radius: 8px;
             font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
 
         button:hover {
             background: #1d4ed8;
+            transform: translateY(-2px);
         }
 
+        .contact-note {
+            margin-top: 18px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* Footer */
         footer {
             background: #111827;
-            color: white;
+            color: #d1d5db;
             text-align: center;
-            padding: 25px;
+            padding: 30px 20px;
         }
-        footer {
-    background: #111827;
-    color: white;
-    text-align: center;
-    padding: 25px;
-}
 
+        footer strong {
+            color: white;
+        }
 
-@media (max-width: 600px) {
-    nav {
-        padding: 15px 10px;
-    }
+        /* Mobile */
+        @media (max-width: 850px) {
+            .cards,
+            .steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
+            .services {
+                grid-template-columns: 1fr;
+            }
 
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
+            .hero h1 {
+                font-size: 42px;
+            }
+        }
 
+        @media (max-width: 600px) {
+            nav {
+                padding: 14px 10px;
+            }
 
-    .hero {
-        padding: 70px 20px;
-    }
+            nav a {
+                display: inline-block;
+                margin: 7px 8px;
+                font-size: 14px;
+            }
 
+            .hero {
+                padding: 75px 20px;
+            }
 
-    .hero h1 {
-        font-size: 36px;
-    }
+            .hero h1 {
+                font-size: 34px;
+            }
 
+            .hero p {
+                font-size: 18px;
+            }
 
-    .hero p {
-        font-size: 18px;
-    }
+            section {
+                padding: 60px 20px;
+            }
 
+            section:nth-of-type(even) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
 
-    section {
-        padding: 50px 20px;
-    }
+            h2 {
+                font-size: 28px;
+            }
 
+            .cards,
+            .steps {
+                grid-template-columns: 1fr;
+            }
 
-    h2 {
-        font-size: 28px;
-    }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
 
-
-    .skill {
-        width: 100%;
-    }
+            .button {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+        .logo {
+    height: 120px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
 }
     </style>
 </head>
 
 <body>
 
-    <nav>
-        <img src="tts-logo.png" alt="Tsige Technology Services logo" style="height: 60px; width: auto;">
-       <a href="#about">About</a>
-<a href="#why-us">Why Choose Us</a>
-<a href="#skills">Services</a>
-<a href="#contact">Contact</a>
-    </nav>
+    <!-- Navigation -->
+<nav>
+    <img src="tts-logo.png" alt="Tsige Technology Services logo" class="logo">
+    <a href="#about">About</a>
+    <a href="#why-us">Why Choose Us</a>
+    <a href="#services">Services</a>
+    <a href="#how-we-work">How We Work</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <div class="hero">
+    <!-- Hero -->
+    <header class="hero">
         <h1>Tsige Technology Services</h1>
 
         <p>
-    Professional computer solutions and technology services for small businesses.
-</p>
+            Reliable computer and technology solutions designed
+            specifically for small businesses.
+        </p>
 
-        <a href="#about" class="button">Learn More</a>
-    </div>
+        <div class="hero-buttons">
+            <a href="#contact" class="button">Get a Free Consultation</a>
+            <a href="#services" class="button button-secondary">View Our Services</a>
+        </div>
+    </header>
 
+    <!-- About -->
     <section id="about">
         <h2>About Us</h2>
 
-        <p>
-    Tsige Technology Services helps small businesses with custom-built computers,
-    new computer setup, configuration, upgrades, and technology solutions.
-    Our goal is to provide reliable computer solutions that fit each business's needs.
-</p>
+        <p class="about-content">
+            Tsige Technology Services helps small businesses with
+            custom-built computers, new computer setup, configuration,
+            upgrades, maintenance, and technology solutions.
+            Our goal is to provide reliable, practical computer solutions
+            that fit each business's needs.
+        </p>
     </section>
-<section id="why-us">
-    <h2>Why Choose Us</h2>
 
-    <p>
-        We focus on providing reliable computer solutions designed
-        specifically for small businesses.
-    </p>
+    <!-- Why Choose Us -->
+    <section id="why-us">
+        <h2>Why Choose Us</h2>
 
-    <div class="skills">
-        <div class="skill">Reliable Solutions</div>
-        <div class="skill">Personal Service</div>
-        <div class="skill">Business Focused</div>
-        <div class="skill">Professional Setup</div>
-    </div>
-</section>
-    <section id="skills">
-        <h2>Our Services</h2>
+        <p class="section-intro">
+            We focus on dependable technology solutions and personal
+            service for small businesses.
+        </p>
 
-        <div class="skills">
-            <div class="skill">Custom PC Building</div>
-            <div class="skill">Business Computer Setup</div>
-            <div class="skill">Computer Configuration</div>
-            <div class="skill">PC Upgrades & Maintenance</div>
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">✓</div>
+                <h3>Reliable Solutions</h3>
+                <p>
+                    Quality computer solutions designed for dependable
+                    everyday business use.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">👤</div>
+                <h3>Personal Service</h3>
+                <p>
+                    We take the time to understand your needs and
+                    recommend practical solutions.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">💼</div>
+                <h3>Business Focused</h3>
+                <p>
+                    Technology solutions built around the needs of
+                    small businesses.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">⚙️</div>
+                <h3>Professional Setup</h3>
+                <p>
+                    Proper setup and configuration to help your
+                    equipment work the way it should.
+                </p>
+            </div>
+
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
+    <!-- Services -->
+    <section id="services">
+        <h2>Our Services</h2>
 
-        <p>
-    Tell us what your business needs, and we'll be happy to discuss
-    the right computer solution for you.
-</p>
+        <p class="section-intro">
+            From a new custom computer to upgrades and setup,
+            we provide practical technology services for your business.
+        </p>
 
-        <form action="https://formspree.io/f/xeajrypz" method="POST">
+        <div class="services">
 
-    <input
-        type="text"
-        name="name"
-        placeholder="Your Full Name"
-        required
-    >
+            <div class="service">
+                <h3>🖥️ Custom PC Building</h3>
+                <p>
+                    Custom-built computers selected and configured
+                    around your business's performance and budget needs.
+                </p>
+            </div>
 
-    <input
-        type="email"
-        name="email"
-        placeholder="Your Business Email"
-        required
-    >
+            <div class="service">
+                <h3>💼 Business Computer Setup</h3>
+                <p>
+                    New computer setup and preparation so your system
+                    is ready for business use.
+                </p>
+            </div>
 
-    <select name="service" required>
-        <option value="">What service do you need?</option>
-        <option value="Custom PC Building">Custom PC Building</option>
-        <option value="Business Computer Setup">Business Computer Setup</option>
-        <option value="Computer Configuration">Computer Configuration</option>
-        <option value="PC Upgrades & Maintenance">PC Upgrades & Maintenance</option>
-    </select>
+            <div class="service">
+                <h3>⚙️ Computer Configuration</h3>
+                <p>
+                    System configuration and optimization to help
+                    your computer work efficiently.
+                </p>
+            </div>
 
-    <textarea
-        name="message"
-        placeholder="Tell us about your computer needs"
-        required
-    ></textarea>
+            <div class="service">
+                <h3>🔧 PC Upgrades & Maintenance</h3>
+                <p>
+                    Hardware upgrades and maintenance to improve
+                    performance and extend the life of your computer.
+                </p>
+            </div>
 
-    <button type="submit">Send Message</button>
-
-</form>
+        </div>
     </section>
 
+    <!-- How We Work -->
+    <section id="how-we-work">
+        <h2>How We Work</h2>
+
+        <p class="section-intro">
+            A simple process designed to make your technology needs easier.
+        </p>
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Tell Us What You Need</h3>
+                <p>
+                    Contact us and tell us about your computer or
+                    technology needs.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Get a Recommendation</h3>
+                <p>
+                    We discuss your needs and identify a practical
+                    solution.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>We Set It Up</h3>
+                <p>
+                    Your computer or technology solution is configured
+                    according to your requirements.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>You're Ready to Work</h3>
+                <p>
+                    Get a properly prepared computer solution for
+                    your business.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="contact-box">
+
+            <h2>Contact Us</h2>
+
+            <p class="section-intro">
+                Have a computer or technology need?
+                Tell us what you're looking for, and we'll be happy
+                to discuss the right solution for your business.
+            </p>
+
+            <form action="https://formspree.io/f/xeajrypz" method="POST">
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Full Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Business Email"
+                    required
+                >
+
+                <select name="service" required>
+                    <option value="">What service do you need?</option>
+                    <option value="Custom PC Building">
+                        Custom PC Building
+                    </option>
+                    <option value="Business Computer Setup">
+                        Business Computer Setup
+                    </option>
+                    <option value="Computer Configuration">
+                        Computer Configuration
+                    </option>
+                    <option value="PC Upgrades & Maintenance">
+                        PC Upgrades & Maintenance
+                    </option>
+                </select>
+
+                <textarea
+                    name="message"
+                    placeholder="Tell us about your computer or technology needs"
+                    required
+                ></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+            <p class="contact-note">
+                Your message will be sent securely through our contact form.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2026 Tsige Technology Services. All rights reserved.</p>
+        <p>
+            <strong>Tsige Technology Services</strong>
+        </p>
+
+        <p>
+            Reliable Computer & Technology Solutions for Small Businesses
+        </p>
+
+        <p>
+            © 2026 Tsige Technology Services. All rights reserved.
+        </p>
     </footer>
 
 </body>
 </html>
+
